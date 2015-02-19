@@ -5,12 +5,13 @@
  * @author Mike Corlett
  * @version 1.1 
  * @package mikecouk
+ * @about Generic file logging and debugging class I wrote in 2003, thats along time ago :)
  */
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-// --~==CVS Information==~--
+// --~==CVS Information==~--  <--- oooo originally in CVS, then in Subversion, then in GitHub !
 //
 // $Author: corlettm $
 // $Date: 2005/10/25 08:32:31 $
@@ -94,8 +95,8 @@ class phpdebug {
   // Therefore the FILENAME part does not need to have any 'slashes' in it.
   $log_filename = str_replace("/", "-", $log_filename);
   $today = date("d-m-y-Hi");
-  if (($_SERVER["SERVER_ADMIN"] == "") || ($_SERVER["SERVER_ADMIN"] == "webmaster@itisholdings.com")) {
-	  $this->email_address = "mike.corlett@inrix.com";
+  if (($_SERVER["SERVER_ADMIN"] == "") || ($_SERVER["SERVER_ADMIN"] == "webmaster@domain_name.com")) {
+	  $this->email_address = "mike.corlett@gmail.com";
   } else {
   	 $this->email_address = $_SERVER["SERVER_ADMIN"]; // Get the email address from the administrator email address
   }
